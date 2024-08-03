@@ -1,0 +1,31 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "Actualmente ...",
+    title: "Desarrollo de habilidades front-end",
+    description:
+      "Actualmente estoy trabajando en mejorar mis habilidades de desarrollo front-end, aprendiendo nuevas tecnologías y mejorando las que ya conozco.",
+
+  },
+  {
+    date: "Julio 2024",
+    title: "MonkeyType Clone",
+    description:
+      "Esta fue una aplicación que hice para practicar mis habilidades de desarrollo front-end. Es un clon de MonkeyType, una aplicación que te ayuda a mejorar tu velocidad de escritura. Puedes ver el proyecto en mi GitHub.",	
+      link: "https://candresdev.github.io/mokeytype/",
+    },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
+  {
+    EXPERIENCE.map(experience =>(
+        <li class="mb-10 ms-4">
+            <ExperienceItem {...experience} />
+        </li>
+        )
+    )
+  }
+</ol>

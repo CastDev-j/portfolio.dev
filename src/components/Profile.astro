@@ -1,0 +1,49 @@
+---
+import GithubICon from "../components/icons/Github.astro";
+import LinkedInICon from "../components/icons/LinkedIn.astro";
+import MailICon from "../components/icons/Mail.astro";
+import SpotifyIcon from "../components/icons/Spotify.astro";
+---
+
+<section class="flex items-center bg-indigo-100/10 p-5 gap-10 rounded-lg h-auto">
+  <article class="flex flex-col items-center min-w-[180px] justify-between min-h-[188px]">
+    <img
+      class="rounded-full size-32 mb-4 border-4 border-white/20"
+      src="https://avatars.githubusercontent.com/u/103233568?v=4"
+      alt="cAndDev photo"
+    />
+    <h3 class="text-xl bg-indigo-50/10 py-2 px-4 rounded-2xl">Andrés Castillo</h3>
+  </article>
+
+  <article class="flex flex-col items-end justify-between min-w-[200px] min-h-[188px]">
+    <p class="flex text-pretty text-lg">
+      Soy un apasionado por la tecnología y el desarrollo web. He desarrollado multiples proyectos y tengo experiencia en el desarrollo de aplicaciones web.
+    </p>
+    <ul class="flex flex-row gap-4 mt-5 text-sm lg:mt-16">
+      <li>
+        <a href="https://github.com/cAndresDev" class="flex flex-col items-center justify-center gap-2 py-2 px-1 rounded-md transition hover:bg-indigo-50/10"> 
+          <GithubICon class="fill-white size-5 md:size-6" />
+          GitHub
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/andres-castillo-jimenez-249210292/" class="flex flex-col items-center justify-center gap-2 py-2 px-1 rounded-md transition hover:bg-indigo-50/10">
+          <LinkedInICon class="fill-white size-5 md:size-6" />
+          LinkedIn
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/cAndresDev" class="flex flex-col items-center justify-center gap-2 py-2 px-1 rounded-md transition hover:bg-indigo-50/10">
+          <MailICon class="size-5 md:size-6" />
+          Email
+        </a>
+      </li>
+      <li>
+        <a href="https://open.spotify.com/user/213eau5yell4e5osern3fhnui" class="flex flex-col items-center justify-center gap-2 py-2 px-1 rounded-md transition hover:bg-indigo-50/10">
+          <SpotifyIcon class="size-4 md:size-6" />
+          Spotify
+        </a>
+      </li>
+    </ul>
+  </article>
+</section>

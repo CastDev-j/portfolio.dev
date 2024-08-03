@@ -1,0 +1,67 @@
+---
+import CssIcon from "./icons/Css.astro";
+import HtmlIcon from "./icons/Html.astro";
+import JsIcon from "./icons/JavaScript.astro";
+
+const TAGS = {
+  HTML: {
+    name: "HTML",
+    class: "bg-red-900/40 text-white",
+    icon: HtmlIcon,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-blue-900/40 text-white",
+    icon: CssIcon,
+  },
+  JS: {
+    name: "JS",
+    class: "bg-yellow-900/40 text-white",
+    icon: JsIcon,
+  },
+};
+
+const PROYECTS = [
+  {
+    title: "MokeyType Clon - Ejercicio de práctica",
+    description:
+      "Clon de MonkeyType, una aplicación que te ayuda a mejorar tu velocidad de escritura.",
+    link: "https://candresdev.github.io/mokeytype/",
+    github: "https://github.com/cAndresDev/mokeytype",
+    image: "/proyects_svgl/svgl.webp",
+    tags: [TAGS.HTML, TAGS.JS, TAGS.CSS],
+  },
+];
+---
+
+{
+  PROYECTS.map((proyect) => {
+    const { title, description, link, github, image, tags } = proyect;
+
+    return (
+      <article class="flex flex-col gap-1">
+        <h3 class="text-2xl font-semibold text-indigo-200 mb-2">{title}</h3>
+        <p class="text-pretty text-lg mb-4">{description}</p>
+        <ul class="flex gap-2 flex-row">
+          {tags.map((tag) => (
+            <li>
+              <span  class={`flex flex-row items-center justify-between gap-x-3 rounded-full text-xs py-2 px-4 font-semibold ${tag.class} `}>
+                <tag.icon class="size-4" /> 
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+        <a href={link}
+        target="_blank"
+        rel="noopener noreferrer">
+            <img
+          class="rounded shadow-2xl shadow-white/10 mt-7"
+          src={image}
+          alt={`Captura de pantalla del proyecto: ${image}`}
+        />  
+        </a>
+      </article>
+    );
+  })
+}
